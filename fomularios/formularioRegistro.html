@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icons/clipboard-plus.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/stylesFormLog.css">
+    <title>Unete a nuestros clientes - T. Shop Futbol</title>
+</head>
+<body>
+    <div class="marca">
+        <a href="../index.html"><img src="../icons/android-chrome-512x512.png" alt="Logo de la marca"></a>
+    </div>
+    <form action="mailto:diego.carramolino06@gmail.com" method="post">
+        <p><span class="requerido">&#42; </span>Campos requeridos.</p>
+        <label for="nombreApellidos"> <span class="requerido">&#42; </span>Nombre completo: </label>
+            <input type="text" name="nombre" id="nombreApellidos" maxlength="20" size="20" placeholder="Nombre" required autofocus>
+            <input type="text" name="nombre" id="apellidos" maxlength="50" size="50" placeholder="Apellidos" required>
+        
+        <label for="fecha">Fecha de nacimiento: </label>
+            <input type="date" name="fecha" id="fecha">
+        
+        <label for="direccion"><span class="requerido">&#42; </span>Direcci&oacute;n: </label>
+            <input type="text" name="direccion" id="direccion" required>
+        
+        <label for="localidad"><span class="requerido">&#42; </span>Localidad: </label>
+            <input type="text" name="localidad" id="localidad" required>
+        
+        <label for="provincia"><span class="requerido">&#42; </span>Provincia: </label>
+            <input type="text" name="provincia" id="provincia" list="list_provincias" required>
+            <datalist id="list_provincias">
+                <option value="Albacete">Albacete</option>
+                <option value="Ciudad Real">Ciudad Real</option>
+                <option value="Toledo">Toledo</option>
+                <option value="Guadalajara">Guadalajara</option>
+                <option value="Cuenca">Cuenca</option>
+            </datalist>
+        
+        <label for="telefono"><span class="requerido">&#42; </span>Tel&eacute;fono: </label>
+            <input type="tel" name="telefono" id="telefono" pattern="(+[0-9] {2})-[0-9]{9}" required>
+
+        <label for="email"><span class="requerido">&#42; </span>Correo Electrónico: </label>
+            <input type="email" name="email" id="email" required>
+
+        <label for="contrasena"><span class="requerido">&#42; </span>Contraseña: </label>
+            <input type="password" id="contrasena" name="pass" required>
+        <div class="checkBox">
+            <input type="checkbox" name="normativa" id="noticias" class="normativa">
+            <label for="noticias">Subscribete a nuestro canal de noticias y mantente informado de todas las promociones.</label>
+        </div>
+        
+        <div class="checkBox">
+            <input type="checkbox" name="normativa" id="normativa" class="normativa" required>
+            <label for="normativa"><span class="requerido">&#42; </span>Usted est&aacute; de acuerdo con que se traten sus datos de acuerdo a la normativa vigente de protección de datos.</label>
+        </div>
+        <input type="submit" value="Enviar Datos" class="submit">
+    </form>
+</body>
+</html>

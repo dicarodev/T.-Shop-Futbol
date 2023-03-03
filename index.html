@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./icons/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/stylesIndex.css">
+    <script defer src="./JS/funtions.js"></script>
+
+    <!--Importacion de la fuente y el script para el search-box-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/70c682a6d6.js" crossorigin="anonymous"></script>
+
+    <title>T.Shop Fútbol - Tienda de Fútbol Online</title>
+</head>
+<body>
+    <div id="contenedor">
+        <header>
+
+            <div id="logo_buscador">
+
+                <div id="logo_texto">
+                    <a href="./index.html"><img src="./icons/android-chrome-192x192.png" alt="Imagen del logo corporativo"></a>
+                </div>
+
+                <div class = "search_box search_movil">
+                    <input class = "search-text" type="text" placeholder = "Busca tu producto">
+                    <a href="#" class = "search-btn"><i class="fas fa-search"></i></a>
+                </div>
+
+            </div>
+
+            <div id="header_items">
+                <div id="registo_contacto">
+                    <div id="registro">
+                        <img src="./icons/clipboard-plus.svg" alt="Icono de registro" class="icon">
+                        <a href="./fomularios/formularioRegistro.html">MI CUENTA</a>
+                    </div>
+                    <div id="contacto">
+                        <img src="./icons/chat-text.svg" alt="Icono de contacto" class="icon">
+                        <a href="./fomularios/formularioContacto.html">CONTACTO</a>
+                    </div>
+                </div>
+                
+                <div id="compartir_carrito">
+                    <div>
+                        <a href=""><img src="./icons/share.svg" alt="Icono de compartir" class="icon"></a>
+                    </div>
+
+                        <div class="contenedor_icono">
+
+                            <div class="contenedor_icono_carrito">
+                                <img src="./icons/cart4.svg" alt="Icono de carrito" class="icon icon_car">
+                            </div>
+                            
+    
+                            <div class="contador_productos">
+                                <span id="contador_productos">0</span>
+                            </div>
+                            
+                            <div class="contenedor_productos_carrito hidden_car">
+    
+                                <div class="fila_producto">
+        
+                                    <div class="productos_carrito">
+                                        <div class="info_productos_carrito">
+                                            <span class="cantidad_producto_carrito"></span>
+                                            <p class="titulo_producto_carrito"></p>
+                                            <span class="precio_producto_carrito"></span>
+                                        </div>
+                                        <img src="./icons/x-lg.svg" alt="Icono cancelar producto" class="icon icon_close">
+                                    </div>
+        
+                                </div>
+        
+                                <div class="total_carrito">
+                                    <h3>Total: </h3>
+                                    <span class="total_pagar"></span>
+                                </div>
+        
+                            </div>
+                        </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <nav id="nav">
+            <div class="menu_movil">
+                <button class="burguer">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </button>
+                <div class="menu hidden_menu">
+                    <ul class="nav">
+                        <li>
+                            <a href="" class="titulo_menu">La Liga 22/23</a>
+                            <ul>
+                                <li><a href="">Abrigos</a></li>
+                                <li><a href="">Camisetas</a></li>
+                                <li><a href="">Chándal Completo</a></li>
+                                <li><a href="">Pantalones</a></li>
+                                <li><a href="">Sudaderas</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="titulo_menu">Premier League</a>
+                            <ul>
+                                <li><a href="">Abrigos</a></li>
+                                <li><a href="">Camisetas</a></li>
+                                <li><a href="">Chándal Completo</a></li>
+                                <li><a href="">Pantalones</a></li>
+                                <li><a href="">Sudaderas</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="titulo_menu">Series A</a>
+                            <ul>
+                                <li><a href="">Abrigos</a></li>
+                                <li><a href="">Camisetas</a></li>
+                                <li><a href="">Chándal Completo</a></li>
+                                <li><a href="">Pantalones</a></li>
+                                <li><a href="">Sudaderas</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="" class="titulo_menu">NBA</a>
+                            <ul>
+                                <li><a href="">Abrigos</a></li>
+                                <li><a href="">Camisetas</a></li>
+                                <li><a href="">Chándal Completo</a></li>
+                                <li><a href="">Pantalones</a></li>
+                                <li><a href="">Sudaderas</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+
+            <div id="carrousel" class="carrousel">
+                <div class="grande">
+                    <img src="./images/Camiseta_NBA_Denver.jpeg" alt="Imagen 1" class="img">
+                    <img src="./images/Abrigo_RealMadrid.jpeg" alt="Imagen 2" class="img">
+                    <img src="./images/Camiseta_NBA_TuneSquad.jpeg" alt="Imagen 3" class="img">
+                </div>
+
+                <ul class="puntos">
+                    <li class="punto activo"></li>
+                    <li class="punto"></li>
+                    <li class="punto"></li>
+                </ul>
+            </div>
+        </nav>
+
+        <section id="principal">
+
+            <div class="contenedor_items">
+
+                <div class="item">
+                    <figure>
+                        <img src="./images/Camiseta_Barsa.jpeg" alt="producto">
+                    </figure>
+                    <div class="info_producto">
+                        <h2>Camiseta 1ª FC Barcelona 2022/2023</h2>
+                        <p class="price">$30</p>
+                        <button class="btn_añadir_carrito">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="./images/Chandal_Barsa.jpeg" alt="producto">
+                    </figure>
+                    <div class="info_producto">
+                        <h2>Chándal FC Barcelona 2022/2023</h2>
+                        <p class="price">$60</p>
+                        <button class="btn_añadir_carrito">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="./images/Pantalon_Barsa.jpeg" alt="producto">
+                    </figure>
+                    <div class="info_producto">
+                        <h2>Pantalón FC Barcelona 2022/2023</h2>
+                        <p class="price">$40</p>
+                        <button class="btn_añadir_carrito">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="./images/Camiseta_Italia.jpeg" alt="producto">
+                    </figure>
+                    <div class="info_producto">
+                        <h2>Camiseta 1ª Selecci&oacute;n Italiana 2022/2023</h2>
+                        <p class="price">$30</p>
+                        <button class="btn_añadir_carrito">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="./images/Chandal_Italia.jpeg" alt="producto">
+                    </figure>
+                    <div class="info_producto">
+                        <h2>Chándal Selecci&oacute;n Italiana 2022/2023</h2>
+                        <p class="price">$60</p>
+                        <button class="btn_añadir_carrito">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="./images/Pantalon_Italia.jpeg" alt="producto">
+                    </figure>
+                    <div class="info_producto">
+                        <h2>Pantalón Selecci&oacute;n Italiana 2022/2023</h2>
+                        <p class="price">$40</p>
+                        <button class="btn_añadir_carrito">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="./images/Camiseta_RealMadrid.jpeg" alt="producto">
+                    </figure>
+                    <div class="info_producto">
+                        <h2>Camiseta 1ª Real Madrid CF 2022/2023</h2>
+                        <p class="price">$30</p>
+                        <button class="btn_añadir_carrito">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="./images/Chandal_RealMadrid.jpeg" alt="producto">
+                    </figure>
+                    <div class="info_producto">
+                        <h2>Chándal FC Real Madrid CF 2022/2023</h2>
+                        <p class="price">$60</p>
+                        <button class="btn_añadir_carrito">Añadir al carrito</button>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <figure>
+                        <img src="./images/Pantalon_RealMadrid.jpeg" alt="producto">
+                    </figure>
+                    <div class="info_producto">
+                        <h2>Pantalón FC Real Madrid CF 2022/2023</h2>
+                        <p class="price">$40</p>
+                        <button class="btn_añadir_carrito">Añadir al carrito</button>
+                    </div>
+                </div>
+            </div>
+
+            <aside id="noticias">
+
+                <h2>Nuestros clientes</h2>
+
+                <div class="tarjeta_cliente">
+
+                    <img src="./images/Cristiano.jpeg" alt="Imagen de nuestros clientes">
+                    
+                    <div class="opinion">
+                        <span>Juan Alberto</span>
+                        <p>La camiseta que pedi llegó un día antes de lo acordado lo cual contento, todo bien, volveré a comprar en un futuro.</p>
+                    </div>
+                </div>
+
+                <div class="tarjeta_cliente">
+
+                    <img src="./images/alisha-lehmann.jpeg" alt="Imagen de nuestros clientes">
+
+                    <div class="opinion">
+                        <span>Angela Martínez</span>
+                        <p>Envio en tiempo y condiciones.</p>
+                    </div>
+                </div>
+
+                <div class="tarjeta_cliente">
+
+                    <img src="./images/MariaUSA.jpg" alt="Imagen de nuestros clientes">
+
+                    <div class="opinion">
+                        <span>Marta Castillo</span>
+                        <p>Es la segunda vez que compramos un producto en T. Shop Futbol y cumplen todos sus compromisos.</p>
+                    </div>
+                </div>
+
+                <div class="tarjeta_cliente">
+
+                    <img src="./images/Puyol.jpeg" alt="Imagen de nuestros clientes">
+
+                    <div class="opinion">
+                        <span>Borja C.</span>
+                        <p>Rápido servicio y muy buena atención.</p>
+                    </div>
+                </div>
+                
+            </aside>
+
+        </section>
+
+        <footer>
+            <div class="contenedor_footer">
+                <div class="sobre_nosotros">
+                    <div class="marca">
+                        <h2>Sobre T.Shop Futbol</h2>
+                        <ul>
+                            <li><a href="./fomularios/quienesSomos.html">La marca</a></li>
+                            <li><a href="./fomularios/formularioRegistro.html">Subscribete al canal de noticias</a></li>
+                        </ul>
+                    </div>
+                    <div class="pedidos">
+                        <h2>Su pedido</h2>
+                        <ul>
+                            <li><a href="./fomularios/formularioContacto.html">Contacto</a></li>
+                            <li><a href="#">Pagos</a></li>
+                            <li><a href="#">Envios</a></li>
+                        </ul>
+                    </div>
+                    
+                </div>
+                <div class="redes">
+                    <a href="https://www.instagram.com/t.shopfutbol/?igshid=YmMyMTA2M2Y%3D" target="_blank">
+                        <img src="./icons/instagram.svg" alt="Icono instagram" class="icon">
+                    </a>
+                    <a href="https://twitter.com/IESJuanBosco?s=20" target="_blank">
+                        <img src="./icons/twitter.svg" alt="Icono twitter" class="icon">
+                    </a>
+                    <a href="https://www.facebook.com/iesjuanbosco/?locale=es_ES" target="_blank">
+                        <img src="./icons/facebook.svg" alt="Icono twitter" class="icon">
+                    </a>
+                </div>
+                <div class="atencion_cliente">
+                    <h2>Atención al cliente</h2>
+                    <span><img src="./icons/telephone.svg" alt="Icono telefono" class="icon"> +34 655 44 66 77</span>
+                </div>
+            </div>
+            <div class="mapa">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24665.72791390133!2d-3.2326898414186154!3d39.39661929529009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd69aee4af0d7f0f%3A0x2899244e40b7f09b!2s13600%20Alc%C3%A1zar%20de%20San%20Juan%2C%20Ciudad%20Real!5e0!3m2!1ses!2ses!4v1677317173169!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <span class="copy">
+                &copy; T. Shop Futbol. Todos los derechos reservados.
+            </span>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,655 @@
+@font-face {
+    font-family: "DosisRegular";
+    src: url(../fonts/Dosis-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DosisRegular";
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1000px;
+    min-width: 400px;
+    background-color: lavender;
+}
+.icon{
+    height: 2em;
+    width: 2em;
+}
+
+/*HEADER*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    margin: .5em;
+}
+
+#logo_texto img{
+    width: 7em;
+    height: 7em;
+    border-radius: 10px;
+    margin-right: .5em;
+}
+
+#logo_buscador{
+    display: flex;
+    align-items: center;
+}
+
+/*BUSCCADOR*/
+
+.search_box {
+    background: #c3b1e1cf;
+    height: 3.75em;
+    border-radius: 2.5em;
+    padding: .625em;
+}
+
+@media screen and (min-width: 481px) {
+    .search_box:hover > .search-text{
+        width: 15em;
+    }
+    .search_box:hover > .search-btn{
+        background: white;
+        color: #982aff;
+    }
+}
+
+.search-btn {
+    color: black;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.search-btn > i {
+    font-size: 1.5em;
+}
+
+.search-text {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    transition: 0.4s;
+    font-size: 1em;
+    font-weight: 700;
+    line-height: 2.3em;
+    width: 0;
+}
+
+/*Items -> formulario de registro, de contacto, compartir y carrito*/
+
+#header_items{
+    display: flex;
+}
+#registo_contacto{
+    display: flex;
+    margin-right: 1.5em;
+}
+#registro{
+    margin-right: .5em;
+}
+
+#registo_contacto a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+#compartir_carrito{
+    display: flex;
+}
+
+/*CARRITO*/
+.contenedor_icono{
+    padding-left: 2em;
+}
+
+.icon_car:hover{
+    cursor: pointer;
+}
+
+.contador_productos{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    left: 70%;
+    margin-top: -.5em;
+    width: 1.16em;
+    height: 1.16em;
+    background-color: #000;
+    color: white;
+}
+
+#contador_productos{
+    font-size: 0.75em;
+}
+
+.contenedor_productos_carrito{
+    position: fixed;
+    right: 0;
+    top: 4em;
+    max-width: 388px;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background-color: #cb9ef6;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+}
+
+.productos_carrito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em;
+    border-bottom: 1px solid grey;
+}
+
+.carritoVacio{
+    padding: 20px;
+    text-align: center;
+}
+
+.info_productos_carrito{
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.titulo_producto_carrito{
+    font-size: 1.25em;
+}
+
+.precio_producto_carrito{
+    font-weight: 700;
+    font-size: 1.25em;
+    margin-left: 0.625em;
+}
+
+.cantidad_producto_carrito{
+    font-weight: 400;
+    font-size: 1.25em;
+}
+
+.icon_close{
+    width: 1.5625em;
+    height: 1.5625em;
+}
+
+.icon_close:hover{
+    cursor: pointer;
+}
+.total_carrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.25em 0;
+    gap: 1.25em;
+}
+
+.total_carrito h3{
+    font-size: 1.25em;
+    font-weight: 700;
+}
+
+.total_pagar{
+    font-size: 1.25em;
+    font-weight: 900;
+}
+
+.hidden_car{
+    display: none;
+}
+
+/*NAV Y MENU*/
+.burguer{
+    display: none;
+}
+
+#nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*MENU DESPLEGABLE*/
+.menu_movil{
+    align-items: center;
+    background-color: #73eefceb;
+    border-radius: 10px;
+}
+.nav{
+    display: flex;
+}
+
+.titulo_menu{
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.menu ul, li{
+    list-style: none;
+}
+
+.nav li a{
+    text-decoration: none;
+    color: black;
+    padding: 0.6em 0.6em;
+}
+
+.nav li:hover{
+    background-color: #cb9ef6ef;
+    border-radius: 10px;
+    transition-duration: .8s;
+    text-decoration: underline;
+}
+
+.nav li ul{
+    display: none;
+    position: absolute;
+    z-index: 99;
+    background-color: #73eefceb;
+    border-radius: 10px;
+}
+
+.nav li:hover > ul, a{
+    display: block;
+}
+
+/*CAROUSELl*/
+.carrousel{
+    width: 65%;
+    margin-top: 2em;
+    border-radius: 1em;
+    background-color: #73eefc20;
+    box-shadow: 1em 1em 2em #b57aec61, -1em -1em 2em #b57aec61, inset 0 0 0 transparent, inset 0 0 0 transparent;
+    overflow: hidden;
+}
+.carrousel .grande{
+    width: 300%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    border-radius: 1em;
+    transition: all .5s ease;
+}
+.carrousel .img{
+    width: calc(100% / 3 - 2em);
+    max-height: 50vh;
+    border-radius: 5em;
+}
+.carrousel .puntos{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: .4em;
+}
+.carrousel .punto{
+    width: 2em;
+    height: 2em;
+    margin: 1em 1em 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.656);
+}
+
+.carrousel .punto.activo {
+    background-color: rgb(111, 207, 239);
+}
+
+/*Seccion principal  y noticias*/
+
+#principal{
+    display: grid;
+    grid-template-areas: 
+    "contenedor_items contenedor_items noticias ";
+    margin: 2em 0;
+}
+
+/*CONTENEDOR DE PRODUCTOS*/
+.contenedor_items{
+    grid-area: contenedor_items;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25em;
+    margin-right: 1.2em;
+}
+
+.item{
+    border-radius: 10px;
+    background-color: #b57aec28;
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+}
+
+.item img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: all .5s;
+}
+
+.item figure{
+    overflow: hidden;
+}
+
+.item:hover img{
+    transform: scale(1.2);
+}
+
+.info_producto{
+    padding: 0.9375em 1.875em;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: .625em;
+}
+
+.price{
+    font-size: 1.125em;
+    font-weight: 900;
+}
+
+.info_producto button{
+    border: none;
+    background: none;
+    background-color: #000;
+    color: #fff;
+    padding: .9375em .625em;
+    cursor: pointer;
+}
+
+/*NUESTROS_CLIENTES*/
+#noticias{
+    grid-area: noticias;
+}
+
+#noticias h2{
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.tarjeta_cliente{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 1em;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: .5em;
+    background-color: #b57aec28;
+}
+
+.tarjeta_cliente img{
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    margin-right: .5em;
+}
+
+.opinion span{
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+/*FOOTER*/
+
+footer{
+    margin-bottom: 1.5em;
+    font-size: 1.2em;
+}
+
+.contenedor_footer{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.sobre_nosotros{
+    display: flex;
+    justify-content: space-between;
+    flex: .5;
+    line-height: 1.7em;
+}
+.sobre_nosotros a{
+    text-decoration: none;
+    color: #000;
+}
+.sobre_nosotros a:hover{
+    text-decoration: underline;
+}
+.redes{
+    display: flex;
+    justify-content: space-between;
+    flex: .2;
+}
+.atencion_cliente{
+    display: flex;
+    flex-direction: column;
+}
+.atencion_cliente .icon{
+    height: 1.2em;
+    width: 1.2em;
+}
+
+.copy{
+    font-weight: 700;
+}
+
+@media screen and (min-width: 480px) and (max-width: 1024px){
+    body{
+        max-width: 700px;
+    }
+
+    /*HEADER Y BUSCADOR*/
+    header{
+        flex-direction: column;
+    }
+    .search_box:hover > .search-text{
+        width: 13em;
+    }
+
+    #header_items {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 0;
+    }
+    /*CARRITO*/
+    .contenedor_productos_carrito{
+        top: 10.2em;
+    }
+    /*CONTENEDOR DE PRODUCTOS*/
+    #principal{
+        grid-template-areas: 
+        "contenedor_items contenedor_items"
+        "noticias noticias";
+    }
+    .info_producto {
+        padding: 0.6375em 0.875em;
+        line-height: 1.5;
+    }
+
+    /*FOOTER*/
+    .contenedor_footer{
+        flex-direction: column;
+    }
+    .contenedor_footer div{
+        padding-bottom: .5em;
+    }
+    .sobre_nosotros{
+        justify-content: flex-start;
+    }
+
+    .sobre_nosotros ul{
+        margin-right: 2.5em;
+    }
+
+    .redes{
+        justify-content: flex-start;
+    }
+    .redes a{
+        margin-right: .8em;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .contenedor_items{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+    }
+    .info_producto {
+        line-height: 1;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    /*MENU_MOVIL*/
+    #nav{
+        align-items: flex-start;
+    }
+
+    .burguer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 3em;
+        height: 3em;
+        border: 0;
+        background: transparent;
+        gap: .65em;
+        margin: .5em;
+        cursor: pointer;
+    }
+
+    .burguer > div{
+        background: black;
+        height: 2px;
+        width: 100%;
+        border-radius: 5px;
+        transition: all .5s;
+        transform-origin: left;
+    }
+
+    .burguer:hover div:first-child{
+        transform: rotate(45deg);
+    }
+
+    .burguer:hover div:nth-child(2){
+        opacity: 0;
+    }
+
+    .burguer:hover div:nth-child(3){
+        transform: rotate(-45deg);
+    }
+    
+    .menu_movil{
+        display: flex;
+    }
+
+    .nav{
+        flex-direction: column;
+        background-color: #cb9ef6ef;
+    }
+    .nav li{
+        display: flex;
+    }
+    .nav li ul{
+        position: initial;
+    }
+
+    .hidden_menu{
+        display: none;
+    }
+
+    .carrousel {
+        align-self: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+    body{
+        max-width: 480px;
+    }
+
+    /*HEADER Y BUSCADOR*/
+    header{
+        flex-direction: column;
+    }
+
+    #logo_buscador {
+        flex-direction: column;
+    }
+    .search-text{
+        width: 15em;
+    }
+    /*CARRITO*/
+    .contenedor_productos_carrito{
+        top: 15em;
+    }
+
+    #header_items {
+        justify-content: space-around;
+        margin-top: 1em;
+    }
+
+    /*MENU Y CAROUSEL*/
+    .menu_movil{
+        margin-left: .5em;
+    }
+    .carrousel{
+        display: none;
+    }
+
+    /*CONTENEDOR DE PRODUCTOS*/
+    #principal{
+        grid-template-areas: 
+        "contenedor_items contenedor_items"
+        "noticias noticias";
+    }
+
+    .info_producto {
+        padding: 0.6375em 0.875em;
+        line-height: 1;
+    }
+    .contenedor_footer{
+        flex-direction: column;
+    }
+
+    /*CONTENEDOR FOOTER*/
+    .contenedor_footer div{
+        padding-bottom: .5em;
+    }
+    .sobre_nosotros{
+        justify-content: flex-start;
+    }
+
+    .sobre_nosotros ul{
+        margin-right: 2.5em;
+    }
+
+    .redes{
+        justify-content: flex-start;
+    }
+    .redes a{
+        margin-right: .8em;
+    }
+}
